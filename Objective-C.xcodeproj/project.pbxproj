@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E5B4881928BE824300F4EF3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4881828BE824300F4EF3F /* main.m */; };
 		E5B4881E28BE868100F4EF3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4880D28BE822F00F4EF3F /* main.m */; };
-		E5B4881F28BE892A00F4EF3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4880D28BE822F00F4EF3F /* main.m */; };
+		E5B4882728C0015000F4EF3F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4882528C0015000F4EF3F /* Person.m */; };
+		E5B4882828C0015000F4EF3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4882628C0015000F4EF3F /* main.m */; };
+		E5B4882B28C001EA00F4EF3F /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B4882A28C001EA00F4EF3F /* Box.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,11 +45,14 @@
 
 /* Begin PBXFileReference section */
 		E5B487FD28BE821400F4EF3F /* Objective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B4880028BE821400F4EF3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5B4880B28BE822F00F4EF3F /* Lab1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab1; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B4880D28BE822F00F4EF3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5B4881628BE824300F4EF3F /* Lab2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab2; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B4881828BE824300F4EF3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5B4882428C0015000F4EF3F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E5B4882528C0015000F4EF3F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E5B4882628C0015000F4EF3F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5B4882928C001EA00F4EF3F /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		E5B4882A28C001EA00F4EF3F /* Box.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,6 @@
 		E5B487F428BE821400F4EF3F = {
 			isa = PBXGroup;
 			children = (
-				E5B487FF28BE821400F4EF3F /* Objective-C */,
 				E5B4880C28BE822F00F4EF3F /* Lab1 */,
 				E5B4881728BE824300F4EF3F /* Lab2 */,
 				E5B487FE28BE821400F4EF3F /* Products */,
@@ -96,14 +99,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E5B487FF28BE821400F4EF3F /* Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				E5B4880028BE821400F4EF3F /* main.m */,
-			);
-			path = "Objective-C";
-			sourceTree = "<group>";
-		};
 		E5B4880C28BE822F00F4EF3F /* Lab1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +110,11 @@
 		E5B4881728BE824300F4EF3F /* Lab2 */ = {
 			isa = PBXGroup;
 			children = (
-				E5B4881828BE824300F4EF3F /* main.m */,
+				E5B4882628C0015000F4EF3F /* main.m */,
+				E5B4882928C001EA00F4EF3F /* Box.h */,
+				E5B4882A28C001EA00F4EF3F /* Box.m */,
+				E5B4882428C0015000F4EF3F /* Person.h */,
+				E5B4882528C0015000F4EF3F /* Person.m */,
 			);
 			path = Lab2;
 			sourceTree = "<group>";
@@ -127,7 +126,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5B4880428BE821400F4EF3F /* Build configuration list for PBXNativeTarget "Objective-C" */;
 			buildPhases = (
-				E5B487F928BE821400F4EF3F /* Sources */,
 				E5B487FA28BE821400F4EF3F /* Frameworks */,
 				E5B487FB28BE821400F4EF3F /* CopyFiles */,
 			);
@@ -215,14 +213,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E5B487F928BE821400F4EF3F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5B4881F28BE892A00F4EF3F /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E5B4880728BE822F00F4EF3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B4881928BE824300F4EF3F /* main.m in Sources */,
+				E5B4882B28C001EA00F4EF3F /* Box.m in Sources */,
+				E5B4882828C0015000F4EF3F /* main.m in Sources */,
+				E5B4882728C0015000F4EF3F /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
