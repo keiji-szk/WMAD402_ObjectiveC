@@ -1,23 +1,26 @@
 //
 //  main.m
-//  Lab3_
+//  Lab4
 //
-//  Created by 鈴木啓司 on 2022-09-02.
+//  Created by 鈴木啓司 on 2022-09-03.
 //
 
 #import <Foundation/Foundation.h>
-#import "Question.h"
+#import "QuestionManager.h"
+#import "ScoreKeeper.h"
 #import "InputHandler.h"
-#import "ScoreKeeper.h""
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		
 		NSLog(@"MATH!");
+		QuestionManager* qm = [[QuestionManager alloc] init];
+		QuestionFactory* qf = [[QuestionFactory alloc] init];
 		ScoreKeeper* sk = [[ScoreKeeper alloc] init];
+		
 		while(true){
 			
-			Question* q = [[Question alloc] init];		
+			Question* q = [qf generateRandomQuestion];		
 			printf("%s", [[q question] UTF8String] );
 			
 			NSString *inputString = [InputHandler getUserInput];
@@ -33,6 +36,10 @@ int main(int argc, const char * argv[]) {
 				printf("Wrong!\n");
 				[sk addScore:false];
 			}
+			
+			[q answer];
+			[qm addQuestions:q];
+			NSLog(@"%@\n", [qm timeOutput]);
 		}		
 	}
 	return 0;

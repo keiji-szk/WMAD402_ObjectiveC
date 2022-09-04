@@ -15,7 +15,7 @@
 	}else{
 		_wrong += 1;
 	}
-	printf("score: %d right, %d wrong ---- %d%\n", _right, _wrong, 100*_right/(_right+_wrong));
+	NSLog(@"score: %ld right, %d wrong ---- %ld%\n", _right, _wrong, 100*_right/(_right+_wrong));
 }
 
 @end
