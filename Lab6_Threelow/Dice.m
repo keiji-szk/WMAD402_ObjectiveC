@@ -11,8 +11,12 @@
 - (instancetype)init{
 	self = [super init];
 	if (self) {
-		_value = arc4random_uniform(6) + 1;
+		[self roll];
 	}
 	return self;
+}
+
+-(void)roll{
+	_value = arc4random_uniform(6) + 1;
 }
 @end

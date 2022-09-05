@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Dice : NSObject
 @property NSInteger value;
+-(void)roll;
 @end
 
 NS_ASSUME_NONNULL_END

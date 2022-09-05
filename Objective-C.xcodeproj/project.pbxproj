@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E52D0C6728C693A6004191F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E52D0C6628C693A6004191F5 /* main.m */; };
 		E52D0C6D28C69443004191F5 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = E52D0C6C28C69443004191F5 /* Dice.m */; };
+		E52D0C6E28C697A0004191F5 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFDA28C44CA8007D0EEA /* InputHandler.m */; };
 		E57BEFD828C42FEC007D0EEA /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFD728C42FEC007D0EEA /* Question.m */; };
 		E57BEFDB28C44CA8007D0EEA /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFDA28C44CA8007D0EEA /* InputHandler.m */; };
 		E57BEFDE28C44EC0007D0EEA /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFDD28C44EC0007D0EEA /* ScoreKeeper.m */; };
@@ -536,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E52D0C6E28C697A0004191F5 /* InputHandler.m in Sources */,
 				E52D0C6D28C69443004191F5 /* Dice.m in Sources */,
 				E52D0C6728C693A6004191F5 /* main.m in Sources */,
 			);

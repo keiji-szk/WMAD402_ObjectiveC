@@ -7,11 +7,23 @@
 
 #import <Foundation/Foundation.h>
 #import "Dice.h"
+#import "InputHandler.h"
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
 		Dice* dice = [[Dice alloc] init];
-		NSLog(@"%d", dice.value);
+		
+		while(true) {			
+			NSLog(@"%d", dice.value);
+			
+			NSString* userInput = [InputHandler getUserInput];
+			if ([userInput isEqualToString:@"roll"]){
+				[dice roll];
+				continue;
+			}else{
+				break;
+			}
+		}
 	}
 	return 0;
 }
