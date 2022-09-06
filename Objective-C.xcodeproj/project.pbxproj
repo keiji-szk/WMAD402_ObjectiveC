@@ -12,6 +12,10 @@
 		E52D0C6E28C697A0004191F5 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFDA28C44CA8007D0EEA /* InputHandler.m */; };
 		E52D0C7128C7BF78004191F5 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = E52D0C7028C7BF78004191F5 /* GameController.m */; };
 		E52D0C7228C7E868004191F5 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BF01328C550B8007D0EEA /* InputCollector.m */; };
+		E52D0C7A28C7FADF004191F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E52D0C7928C7FADF004191F5 /* main.m */; };
+		E52D0C8028C7FB94004191F5 /* NSString+stringByPigLatinization.m in Sources */ = {isa = PBXBuildFile; fileRef = E52D0C7F28C7FB94004191F5 /* NSString+stringByPigLatinization.m */; };
+		E52D0C8128C807F8004191F5 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BF01328C550B8007D0EEA /* InputCollector.m */; };
+		E52D0C8228C808D1004191F5 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFDA28C44CA8007D0EEA /* InputHandler.m */; };
 		E57BEFD828C42FEC007D0EEA /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFD728C42FEC007D0EEA /* Question.m */; };
 		E57BEFDB28C44CA8007D0EEA /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFDA28C44CA8007D0EEA /* InputHandler.m */; };
 		E57BEFDE28C44EC0007D0EEA /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BEFDD28C44EC0007D0EEA /* ScoreKeeper.m */; };
@@ -40,6 +44,15 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E52D0C6228C693A6004191F5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		E52D0C7528C7FADF004191F5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -120,6 +133,10 @@
 		E52D0C6C28C69443004191F5 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		E52D0C6F28C7BF78004191F5 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		E52D0C7028C7BF78004191F5 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		E52D0C7728C7FADF004191F5 /* Lab7_PigLatin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab7_PigLatin; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52D0C7928C7FADF004191F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E52D0C7E28C7FB94004191F5 /* NSString+stringByPigLatinization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+stringByPigLatinization.h"; sourceTree = "<group>"; };
+		E52D0C7F28C7FB94004191F5 /* NSString+stringByPigLatinization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+stringByPigLatinization.m"; sourceTree = "<group>"; };
 		E57BEFD628C42FEC007D0EEA /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		E57BEFD728C42FEC007D0EEA /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		E57BEFD928C44CA8007D0EEA /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
@@ -165,6 +182,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		E52D0C6128C693A6004191F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E52D0C7428C7FADF004191F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,6 +259,16 @@
 			path = Lab6_Threelow;
 			sourceTree = "<group>";
 		};
+		E52D0C7828C7FADF004191F5 /* Lab7_PigLatin */ = {
+			isa = PBXGroup;
+			children = (
+				E52D0C7928C7FADF004191F5 /* main.m */,
+				E52D0C7E28C7FB94004191F5 /* NSString+stringByPigLatinization.h */,
+				E52D0C7F28C7FB94004191F5 /* NSString+stringByPigLatinization.m */,
+			);
+			path = Lab7_PigLatin;
+			sourceTree = "<group>";
+		};
 		E57BEFE428C451BE007D0EEA /* Lab4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +313,7 @@
 				E57BEFE428C451BE007D0EEA /* Lab4 */,
 				E57BF00628C55010007D0EEA /* Lab5 */,
 				E52D0C6528C693A6004191F5 /* Lab6_Threelow */,
+				E52D0C7828C7FADF004191F5 /* Lab7_PigLatin */,
 				E5B487FE28BE821400F4EF3F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -294,6 +329,7 @@
 				E57BEFE328C451BE007D0EEA /* Lab4 */,
 				E57BF00528C55010007D0EEA /* Lab5 */,
 				E52D0C6428C693A6004191F5 /* Lab6_Threelow */,
+				E52D0C7728C7FADF004191F5 /* Lab7_PigLatin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -358,6 +394,23 @@
 			name = Lab6_Threelow;
 			productName = Lab6_Threelow;
 			productReference = E52D0C6428C693A6004191F5 /* Lab6_Threelow */;
+			productType = "com.apple.product-type.tool";
+		};
+		E52D0C7628C7FADF004191F5 /* Lab7_PigLatin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E52D0C7B28C7FADF004191F5 /* Build configuration list for PBXNativeTarget "Lab7_PigLatin" */;
+			buildPhases = (
+				E52D0C7328C7FADF004191F5 /* Sources */,
+				E52D0C7428C7FADF004191F5 /* Frameworks */,
+				E52D0C7528C7FADF004191F5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lab7_PigLatin;
+			productName = Lab7_PigLatin;
+			productReference = E52D0C7728C7FADF004191F5 /* Lab7_PigLatin */;
 			productType = "com.apple.product-type.tool";
 		};
 		E57BEFE228C451BE007D0EEA /* Lab4 */ = {
@@ -490,6 +543,9 @@
 					E52D0C6328C693A6004191F5 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
+					E52D0C7628C7FADF004191F5 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					E57BEFE228C451BE007D0EEA = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -534,6 +590,7 @@
 				E57BEFE228C451BE007D0EEA /* Lab4 */,
 				E57BF00428C55010007D0EEA /* Lab5 */,
 				E52D0C6328C693A6004191F5 /* Lab6_Threelow */,
+				E52D0C7628C7FADF004191F5 /* Lab7_PigLatin */,
 			);
 		};
 /* End PBXProject section */
@@ -548,6 +605,17 @@
 				E52D0C7128C7BF78004191F5 /* GameController.m in Sources */,
 				E52D0C6D28C69443004191F5 /* Dice.m in Sources */,
 				E52D0C6728C693A6004191F5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E52D0C7328C7FADF004191F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52D0C8228C808D1004191F5 /* InputHandler.m in Sources */,
+				E52D0C8128C807F8004191F5 /* InputCollector.m in Sources */,
+				E52D0C8028C7FB94004191F5 /* NSString+stringByPigLatinization.m in Sources */,
+				E52D0C7A28C7FADF004191F5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +697,22 @@
 			name = Debug;
 		};
 		E52D0C6928C693A6004191F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E52D0C7C28C7FADF004191F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E52D0C7D28C7FADF004191F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -865,6 +949,15 @@
 			buildConfigurations = (
 				E52D0C6828C693A6004191F5 /* Debug */,
 				E52D0C6928C693A6004191F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E52D0C7B28C7FADF004191F5 /* Build configuration list for PBXNativeTarget "Lab7_PigLatin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E52D0C7C28C7FADF004191F5 /* Debug */,
+				E52D0C7D28C7FADF004191F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
