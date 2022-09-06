@@ -25,12 +25,23 @@
 }
 
 -(void)roll{
-	_value = arc4random_uniform(6) + 1;
+	if (_isHold) {
+		return;
+	}
+	_dValue = arc4random_uniform(6) + 1;
 }
 
 -(void)hold{
-	_isHold = true;
+	_isHold = !_isHold;
 }
 
+-(void)reset{
+	_isHold = NO;
+	[self roll];
+}
+
+-(BOOL)isHold{
+	return _isHold;
+}
 
 @end

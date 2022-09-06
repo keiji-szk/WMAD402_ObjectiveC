@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GameController : NSObject
 @property NSMutableArray* dices;
 
+-(void)roll;
 -(void)holdDie: (NSInteger)index;
+-(void)resetDie;
+-(void)showDices;
 
 @end
 
