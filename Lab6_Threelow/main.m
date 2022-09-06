@@ -22,7 +22,6 @@ int main(int argc, const char * argv[]) {
 			NSLog(@"\'reset\'");
 			[gc showDices];
 			
-			
 			NSString* userInput = [InputHandler getUserInput];
 			if ([userInput isEqualToString:@"roll"]){
 				[gc roll];
@@ -34,10 +33,8 @@ int main(int argc, const char * argv[]) {
 				}
 				[gc holdDie:selNum];
 			}else if ([userInput isEqualToString:@"reset"]){
-				
+				[gc resetDie];
 			}
-			
-			
 		}
 	}
 	return 0;

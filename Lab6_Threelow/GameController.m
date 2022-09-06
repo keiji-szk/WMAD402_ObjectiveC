@@ -40,6 +40,7 @@
 
 -(void)showDices{
 	NSMutableString* str = [[NSMutableString alloc] init];
+	NSInteger score = 0;
 	for (id d in _dices) {
 		NSMutableString* diceSymbol;
 		NSInteger v = [d dValue];
@@ -59,11 +60,13 @@
 		if ([d isHold]){
 			[diceSymbol insertString:@"[" atIndex:0];
 			[diceSymbol appendString:@"]"];
+			score += v;
 		}
 		[diceSymbol appendString:@" "];
 		[str appendString:diceSymbol];
 	}
-	NSLog(str);
+	[str appendString:[NSString stringWithFormat:@"%ld", (long)score]];
+	NSLog(@"%@", str);
 }
 
 @end
