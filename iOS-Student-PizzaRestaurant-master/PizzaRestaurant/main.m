@@ -9,6 +9,36 @@
 #import <Foundation/Foundation.h>
 
 #import "Kitchen.h"
+#import "ManagerPicky.h"
+#import "ManagerCheery.h"
+
+
+NSObject<KitchenDelegate>* selectManager(){
+	
+	static ManagerPicky* mPickey = nil;
+	static ManagerCheery* mCheery = nil;
+	NSLog(@"Select manager. 1:picky, 2:cheery, other:no manager >");
+	char str[100];
+	fgets (str, 100, stdin);
+	NSString *managerString = [[NSString alloc] initWithUTF8String:str];
+	NSInteger selNum = [managerString integerValue];
+	if (selNum == 1){
+		if(!mPickey){
+			mPickey = [[ManagerPicky alloc] init];			
+		}
+		NSLog(@"Pickey manager was selected");
+		return mPickey;
+	}else if (selNum == 2){
+		if(!mCheery){
+			mCheery = [[ManagerCheery alloc] init];			
+		}
+		NSLog(@"Cheery manager was selected");
+		return mCheery;
+	}else {
+		NSLog(@"Manager was not selected");
+	}
+	return nil;
+}
 
 int main(int argc, const char * argv[])
 {
@@ -17,12 +47,13 @@ int main(int argc, const char * argv[])
         
         NSLog(@"Please pick your pizza size and toppings:");
         
-        Kitchen *restaurantKitchen = [Kitchen new];
-        
+        Kitchen *restaurantKitchen = [Kitchen new];		
         while (TRUE) {
             // Loop forever
-            
-            NSLog(@"> ");
+			NSObject<KitchenDelegate>* manager = selectManager();
+			[restaurantKitchen setDelegate:manager];
+			
+            NSLog(@"Type size and topping > ");
             char str[100];
             fgets (str, 100, stdin);
             

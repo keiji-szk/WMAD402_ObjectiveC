@@ -33,12 +33,31 @@
 	range.location = 1;
 	range.length = [commandWords count] - 1;
 	NSArray *topping = [commandWords subarrayWithRange:range];
-	return [self makePizzaWithSize:commandWords[0] toppings:topping];
+	return [self makePizzaWithSize:size toppings:topping];
 }
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
 {
-	return [[Pizza alloc] initWithSize:size andTopping:toppings];
+	Pizza* res = nil;
+	if (_delegate){
+		if (![_delegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings]){
+			return nil;
+		}
+		
+		if([_delegate kitchenShouldUpgradeOrder:self]){
+			res = [[Pizza alloc] initWithSize:LARGE andTopping:toppings];
+		}
+	}
+	
+	if (res == nil){
+		res = [[Pizza alloc] initWithSize:size andTopping:toppings];
+	}
+	
+	if ([_delegate respondsToSelector:@selector(kitchenDidMakePizza:) ]){
+		[_delegate kitchenDidMakePizza:res];
+	}
+	
+	return res;
 }
 
 @end
