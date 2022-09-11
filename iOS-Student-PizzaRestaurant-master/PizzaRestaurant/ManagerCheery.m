@@ -14,11 +14,18 @@
 }
 
 -(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen{
+	NSLog(@"I'll update pizza size to Large for you!");
 	return TRUE;
 }
 
 -(void)kitchenDidMakePizza:(Pizza *)pizza{
-	NSLog(@"Delicious pizza! Bon appetit!");
+	if (_deliveryService) {
+		[_deliveryService deliverPizza:pizza];
+	}else {
+		NSLog(@"Delicious pizza! Bon appetit!");		
+	}
+	
+	
 }
 
 @end

@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "KitchenDelegate.h"
 #import "Pizza.h"
+#import "DeliveryService.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ManagerCheery : NSObject<KitchenDelegate>
+@property DeliveryService* deliveryService;
+
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray*)toppings;
 -(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen;
 -(void)kitchenDidMakePizza:(Pizza *)pizza;
